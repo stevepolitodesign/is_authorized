@@ -3,7 +3,11 @@ RSpec.describe IsAuthorized do
     expect(IsAuthorized::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "returns true" do
+    expect(is_authorized?(1,1)).to eq(true)
   end
+
+  it "returns false" do
+    expect(is_authorized?(1,2)).to eq(false)
+  end  
 end
